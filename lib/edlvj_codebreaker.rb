@@ -19,6 +19,7 @@ module Codebreaker
   def match_guess(code)
     return "Your code is not valid" unless code.match(/(^([1-6]{4})$)/)
     
+    @win_status = true if @secret_code == code
     @attempts -= 1
     secret = @secret_code.chars.map(&:to_i)
     
@@ -31,9 +32,8 @@ module Codebreaker
         secret[secret.find_index(number)] = nil
         res << WRONG_POSITION
       end  
-   end 
-  
-    @win_status = true if res.join == '++++'
+    end 
+   
     res.join
   end
     
@@ -56,4 +56,4 @@ module Codebreaker
     end
   end
   end
-end
+end    

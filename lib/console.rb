@@ -1,4 +1,4 @@
-require "./lib/game.rb"
+require "./lib/edlvj_codebreaker.rb"
 
 module Codebreaker
   class Console
