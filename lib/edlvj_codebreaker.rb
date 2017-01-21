@@ -2,6 +2,8 @@ require 'yaml'
 
 module Codebreaker
   class Game
+    
+  attr_accessor :attempts
      
   HINT = 1
   ATTEMPS = 10
@@ -52,8 +54,15 @@ module Codebreaker
   
   def save_stat( username )
     File.open('./stat.yml','a+') do |f|
-      f.write([user: username, attempts: @attempts, date: Time.now].to_yaml)
+      f.write({user: username, attempts: @attempts, date: Time.now}.to_yaml)
     end
   end
+  
+  def stat
+    records = []
+    records = Psych.load_stream(File.open('./stat.yml'))
+    records.sort_by { |record| record[:attempts] }
+  end  
+  
   end
 end    
