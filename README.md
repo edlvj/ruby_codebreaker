@@ -1,10 +1,4 @@
- _____           _     ______           _             
-/  __ \         | |    | ___ \         | |            
-| /  \/ ___   __| | ___| |_/ /_ __ __ _| | _____ _ __ 
-| |    / _ \ / _` |/ _ \ ___ \ '__/ _` | |/ / _ \ '__|
-| \__/\ (_) | (_| |  __/ |_/ / | | (_| |   <  __/ |   
- \____/\___/ \__,_|\___\____/|_|  \__,_|_|\_\___|_|   
-                                                     
+<b>CodeBreaker  </b>
 
 A great way to get started gathering user stories is to do a high-level brain dump of the sorts of things we might like to do. Here are some titles to get started:
 
